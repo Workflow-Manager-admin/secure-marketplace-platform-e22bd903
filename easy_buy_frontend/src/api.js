@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from "react";
 //
 // api.js
 // PUBLIC_INTERFACE: Provides fetch helpers, endpoint calls, and authentication/session management
@@ -58,8 +59,6 @@ export function logout() {
 //
 
 // PUBLIC_INTERFACE
-import { useState, useEffect, useCallback } from "react";
-
 export function useApi(fetchFn, deps = []) {
   // fetchFn: () => apiFetch(...)
   const [data, setData] = useState(null);
